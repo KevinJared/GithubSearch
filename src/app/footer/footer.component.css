@@ -1,0 +1,9 @@
+.footer {
+  border-top: 1px solid rgb(161, 162, 163);
+  text-align: center;
+  padding: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.footer p{
+  font-size: 14px;
+}
