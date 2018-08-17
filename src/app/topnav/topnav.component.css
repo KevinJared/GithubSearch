@@ -1,0 +1,24 @@
+.body {
+  background-color: rgb(39, 38, 38);
+  padding: 8px;
+  padding-bottom: 8px;
+  font-size: 34px;
+}
+
+.row {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.dropdown li{
+  font-size: 14px;
+}
