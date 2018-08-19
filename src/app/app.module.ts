@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
 
+import {FormsModule} from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { TopnavComponent } from './topnav/topnav.component';
-import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -13,14 +14,14 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     AppComponent,
     TopnavComponent,
-    SectionComponent,
     FooterComponent,
     ProfileComponent,
 
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]
