@@ -3,7 +3,7 @@
     <span class="glyphicon glyphicon-search"></span> Search more than
     <strong>93m</strong> repositories</h1>
   <form action="">
-    <input class="form-control"type="text" placeholder="Search Users at Github " [(ngModel)]="username" name="username" (keyup)="findprofile()">
+    <input class="form-control" type="text" placeholder="Search Users at Github " [(ngModel)]="username" name="username" (keyup)="findprofile()">
   </form>
   <br>
   <h4>
@@ -13,34 +13,33 @@
   </h4>
 
   <div *ngIf="profile">
-    <div>
-      {{profile.name}}
+    <div class="panel-heading">
+      <strong>{{profile.name}}</strong>
       <small>({{profile.login}})</small>
+      {{profile.location}}
     </div>
     <div class="panel-body">
-      <div class="col-sm-3">
+      <div class="col-sm-4">
         <img src="{{profile.avatar_url}}" alt="" class="img-circle img-responsive">
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-8">
         <ul>
           <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
           <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
-          <li class="list-group-item" *ngIf="profile.location">{{profile.location}}</li>
-          <li class="list-group-item" *ngIf="profile.organizations_url">
-            <a href=""></a>
-          </li>
         </ul>
       </div>
       <div class="panel-heading">
         <h3>Repos</h3>
-      </div>
-      <div class="panel-body" *ngFor="let repo of repos">
-        <p>
-          {{repo.name}} <a href="{{repo.html_url}}">View on github</a>
-        </p>
+
+        <div class="panel-body" *ngFor="let repo of repos">
+          <p>
+            {{repo.name}}
+            <a href="{{repo.html_url}}">View on github</a>
+          </p>
           <br>
           <p>{{repo.description}}</p>
 
+        </div>
       </div>
     </div>
   </div>
