@@ -13,33 +13,34 @@
   </h4>
 
   <div *ngIf="profile">
-    <div class="panel-heading">
-      <strong>{{profile.name}}</strong>
+    <div>
+     <h1> <strong>{{profile.name}}</strong></h1>
       <small>({{profile.login}})</small>
       {{profile.location}}
     </div>
     <div class="panel-body">
-      <div class="col-sm-4">
+      <div class="col-md-3">
         <img src="{{profile.avatar_url}}" alt="" class="img-circle img-responsive">
       </div>
-      <div class="col-sm-8">
-        <ul>
-          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-          <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
-        </ul>
-      </div>
-      <div class="panel-heading">
-        <h3>Repos</h3>
+      <div class="col-md-4">
+        <h1>Repos</h1>
 
         <div class="panel-body" *ngFor="let repo of repos">
           <p>
             {{repo.name}}
-            <a href="{{repo.html_url}}">View on github</a>
+            <br>
+            <button class="btn btn-danger"><a href="{{repo.html_url}}">View on github</a></button>
           </p>
           <br>
           <p>{{repo.description}}</p>
 
         </div>
+      </div>
+      <div class="col-md-5">
+        <ul>
+          <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+          <li class="list-group-item" *ngIf="profile.email">{{profile.email}}</li>
+        </ul>
       </div>
     </div>
   </div>
